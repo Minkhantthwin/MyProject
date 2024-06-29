@@ -18,7 +18,7 @@ class AuthController extends Controller
         'name'=>'required|max:255|min:3',
         'email'=>['required','email', Rule::unique('users', 'email')],
         'username'=>['required','max:255','min:3',Rule::unique('users', 'username')],
-        'password'=>'required|min:8'
+        'password'=>['required','min:8']
       ]);
       User::create($formData);
 
