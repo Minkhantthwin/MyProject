@@ -20,8 +20,10 @@ class AuthController extends Controller
         'username'=>['required','max:255','min:3',Rule::unique('users', 'username')],
         'password'=>['required','min:8']
       ]);
-      User::create($formData);
+      
 
-      return redirect('/index');
+     $user=User::create($formData);
+      
+      return redirect('/index')->with('success', 'Welcome Dear, '.$user->name);
     }
 }

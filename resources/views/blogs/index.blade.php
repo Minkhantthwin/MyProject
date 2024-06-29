@@ -1,3 +1,4 @@
+
 {{-- <x-layout>
     <x-slot name="title">
          <title>All-Blog</title>
@@ -23,9 +24,10 @@
 </x-layout> --}}
 
 <x-layout>
-
+     @if (session('success'))
+      <div class="alert alert-success text-center">{{session('success')}}</div>
+     @endif
     <x-navbar/>
-
     <x-hero/>
        
     <x-blogs-section :blogs="$blogs"/>
