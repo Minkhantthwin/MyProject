@@ -6,16 +6,11 @@
         <a href="/index" class="nav-link">Home</a>
 
         <a href="#blogs" class="nav-link">Blogs</a>
-       <!--!auth()->check --> @guest 
+       <!--!auth()->check --> 
+       @guest 
+
         <a href="/register" class="nav-link">Register</a>
-
-        <form action="/login" method="POST">
-          
-          <button
-          type="submit"
-          class="nav-link btn btn-link">Login</button>
-         </form>
-
+        <a href="/login" class="nav-link">Login</a>
         
         @else
 

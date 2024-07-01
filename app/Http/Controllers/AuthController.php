@@ -37,5 +37,15 @@ class AuthController extends Controller
 
        return view("auth.login");
     }
+    public function post_login(){
+        $formData=request()->validate([
+        'email'=>['required','email', 'max:255', Rule::exists('users', 'email')],
+        'password'=>['required','min:8','max:255']
+      ], [
+        'email.required'=>'we need your email address',
+        'password.min'=>'Password should be more than 8 characters'
+      ]);
+      
+   }
 
 }
