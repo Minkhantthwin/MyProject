@@ -28,6 +28,7 @@ Route::get('/blogs/{blog:slug}',[BlogController::class, 'show']);
 Route::get('/register', [AuthController::class, 'create']);
 Route::post('/register', [AuthController::class, 'store']);
 Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/login', [AuthController::class, 'login']);
 // Route::get('/categories/{category:slug}', function(Category $category){
 
 //     return view('index',

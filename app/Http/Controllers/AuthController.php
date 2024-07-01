@@ -9,7 +9,7 @@ class AuthController extends Controller
 {
     public function create()
     {
-      return view('register.create');
+      return view('auth.register');
     }
 
     public function store()
@@ -20,7 +20,7 @@ class AuthController extends Controller
         'username'=>['required','max:255','min:3',Rule::unique('users', 'username')],
         'password'=>['required','min:8']
       ]);
-      
+
      $user=User::create($formData);
 
      auth()->login($user);
@@ -32,4 +32,10 @@ class AuthController extends Controller
       auth()->logout();
       return redirect('/index')->with('success', 'Goodbye');
     }
+
+    public function login(){
+
+       return view("auth.login");
+    }
+
 }
