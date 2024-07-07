@@ -11,7 +11,7 @@ class AuthController extends Controller
     {
       return view('auth.register');
     }
-
+//Register-Start
     public function store()
     {
       $formData=request()->validate([
@@ -27,11 +27,14 @@ class AuthController extends Controller
 
      return redirect('/index')->with('success', 'Welcome Dear, '.$user->name);
     }
+//Register-End
 
+//Logout
     public function logout(){
       auth()->logout();
       return redirect('/index')->with('success', 'Goodbye');
     }
+//Logout-End
 
     public function login(){
 
