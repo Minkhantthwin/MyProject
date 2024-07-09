@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->hasMany(Blog::class);
     }
     
+    public function comments()
+    {
+       return $this->hasMany(Comment::class);    
+    }
+    
     public function getNameAttribute($value)
     {
        return ucwords($value);//mgmg => Mgmg
