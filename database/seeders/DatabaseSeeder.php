@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Customer;
 use Illuminate\Database\Seeder;
 use \App\Models\Blog;
@@ -24,10 +25,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
        
-        Category::truncate();
-        Customer::truncate();
-        User::truncate();
-        Blog::truncate();
+        // Category::truncate();
+        // Customer::truncate();
+        // User::truncate();
+        // Blog::truncate();
+        // Comment::truncate();
         
         $mgmg=User::factory()->create(['name'=>'mgmg','username'=>'mgmg']);
         $aungaung=User::factory()->create(['name'=>'aungaung','username'=>'aungaung']);

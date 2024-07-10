@@ -35,7 +35,7 @@ class Blog extends Model
             
     }
 
-    protected $fillable=['title', 'intro', 'body', 'slug'];
+    
 
     protected $with =['category','author'];
 
