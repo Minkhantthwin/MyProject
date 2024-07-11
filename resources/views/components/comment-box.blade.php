@@ -8,10 +8,8 @@
       @csrf
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Comment Here</label>
-      <textarea class="form-control" rows="5" name="body" id=""></textarea>
-      @error('body')
-            <p class="text-danger">{{$message}}</p>
-      @enderror
+      <textarea class="form-control" rows="5" name="body" id="" required></textarea>
+       <x-error name="body"/>
     </div>
    <div class="d-flex justify-content-end"><button type="submit" class="btn btn-primary">Submit</button></div>
     

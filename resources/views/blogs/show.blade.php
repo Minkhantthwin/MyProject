@@ -21,8 +21,14 @@
         </div>
       </div>
     </div>
+            @auth
             <x-comment-box :blog="$blog" />
+            @endauth
+            
+            @if ($blog->comments->count())
             <x-comments :comments="$blog->comments"/> 
+            @endif
+            
             <x-subscribe/>
             <x-blog_you_may_like :randomBlogs="$randomBlogs"/>
              
