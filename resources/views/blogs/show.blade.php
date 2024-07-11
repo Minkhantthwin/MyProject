@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    
+    <!--Comment Box Start -->
     <section class="container">
             <div class="col-md-8 mx-auto">
             @auth
@@ -42,7 +42,7 @@
             @endauth            
             </div>
       </section>
-    
+    <!--Comment Box End -->
     
             <x-comments :comments="$blog->comments"/> 
             <x-subscribe/>
