@@ -29,7 +29,7 @@
             <x-comments :comments="$blog->comments"/> 
             @endif
             
-            <x-subscribe/>
+            
             <x-blog_you_may_like :randomBlogs="$randomBlogs"/>
              
 </x-layout>

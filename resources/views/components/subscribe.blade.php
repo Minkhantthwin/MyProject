@@ -1,4 +1,4 @@
- <!-- subscribe new blogs -->
+ <!-- subscribe new blogs
  <section class="container my-4 text-center" id="subscribe">
     <div class="row">
       <div class="col-md-6 mx-auto">
@@ -16,4 +16,4 @@
         </form>
       </div>
     </div>
-  </section>
+  </section> -->
