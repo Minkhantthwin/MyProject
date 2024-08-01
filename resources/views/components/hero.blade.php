@@ -12,7 +12,7 @@
             Websiteလေးပဲဖြစ်ပါတယ်ခင်ဗျ။နေ့စဉ်နှင့်အပတ်စဉ်လဲ လေ့လာသူတို့ ဗဟုသုတ
             တိုးအောင် Tricks & blogs များအစဉ်မပြတ်တင်ပေးသော Websiteလေးဖြစ်ပါတယ်။
           </p>
-          {{-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <a
               href="#subscribe"
               type="button"
@@ -27,7 +27,7 @@
             >
               Read Blogs
             </a>
-          </div> --}}
+          </div>
         </div>
       </section>
   
