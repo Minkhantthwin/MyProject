@@ -48,6 +48,11 @@ class User extends Authenticatable
     {
        return $this->hasMany(Comment::class);    
     }
+
+    public function subscribedBlogs()
+    {
+        return $this->belongsToMany(Blog::class);
+    }
     
     public function getNameAttribute($value)
     {
