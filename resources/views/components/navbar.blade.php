@@ -1,7 +1,7 @@
  <!-- navbar -->
  <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="/index">Creative Coder</a>
+      <a class="navbar-brand" href="/index">ACE</a>
       <div class="d-flex">
         <a href="/index" class="nav-link">Home</a>
 
