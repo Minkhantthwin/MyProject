@@ -48,6 +48,7 @@ class AuthController extends Controller
         'email.required'=>'we need your email address',
         'password.min'=>'Password should be more than 8 characters'
       ]);
+      
       if(auth()->attempt($formData)){
         return redirect('/index');
       }
