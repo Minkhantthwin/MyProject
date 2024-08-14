@@ -16,14 +16,16 @@
           <div> <a href="/categories/{{$blog->category->slug}}"><span class="badge bg-primary">{{$blog->category->category_name}}</span></a> </div>
           <div class="text-secondary">{{$blog->created_at->diffForHumans()}}</div>
           <div class="text-secondary">
-            <form action="" method="POST">
-              @if (auth()->user()->isSubscribed($blog))
+            <form action="/blogs/{{$blog->slug}}/subscription" method="POST">
+              @csrf
+             @auth
+             @if (auth()->user()->isSubscribed($blog))
               <button class="btn btn-danger">Unsubscribe</button>
               @else
               <button class="btn btn-warning">Subscribe</button>
               @endif
-           
-           
+             @endauth
+               
             </form>
             
           </div>

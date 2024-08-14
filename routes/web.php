@@ -23,8 +23,8 @@ Route::get('/', function () {
 });
 
 Route::get('/index',[BlogController::class,'index']);
-
 Route::get('/blogs/{blog:slug}',[BlogController::class, 'show']);
+Route::post('/blogs/{blog:slug}/subscription', [BlogController::class, 'subscriptionHandler']);
 
 Route::post('/blogs/{blog:slug}/comments', [CommentController::class,'store']);
 
@@ -35,6 +35,8 @@ Route::get('/login', [AuthController::class, 'login'])->middleware('guest');
 Route::post('/login', [AuthController::class, 'post_login'])->middleware('guest');
 
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+
 
 
 // Route::get('/categories/{category:slug}', function(Category $category){
