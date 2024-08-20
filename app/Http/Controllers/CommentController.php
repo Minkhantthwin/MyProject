@@ -23,7 +23,7 @@ class CommentController extends Controller
         
         $subscribers->each(function ($subscriber) use ($blog)
         {
-            Mail ::to($subscriber->email)->send(new SubscriberMail($blog));
+            Mail ::to($subscriber->email)->queue(new SubscriberMail($blog));
         });
 
         return redirect('/blogs/'.$blog->slug);

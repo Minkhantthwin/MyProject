@@ -26,6 +26,8 @@ Route::get('/index',[BlogController::class,'index']);
 Route::get('/blogs/{blog:slug}',[BlogController::class, 'show']);
 Route::post('/blogs/{blog:slug}/subscription', [BlogController::class, 'subscriptionHandler']);
 
+Route::get('/admin/blogs/create', [BlogController::class, 'create']);
+
 Route::post('/blogs/{blog:slug}/comments', [CommentController::class,'store']);
 
 Route::get('/register', [AuthController::class, 'create'])->middleware('guest');
@@ -35,6 +37,8 @@ Route::get('/login', [AuthController::class, 'login'])->middleware('guest');
 Route::post('/login', [AuthController::class, 'post_login'])->middleware('guest');
 
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+
 
 
 
