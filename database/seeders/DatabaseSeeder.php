@@ -39,10 +39,10 @@ class DatabaseSeeder extends Seeder
 
         Blog::factory(2)->create(['category_id'=>$frontend->id,'user_id'=>$mgmg->id]);
         Blog::factory(2)->create(['category_id'=>$backend->id, 'user_id'=>$aungaung->id]);
-        Blog::factory(25)->create(['category_id'=>$frontend->id]);
-        Blog::factory(25)->create(['category_id'=>$backend->id]);
+        Blog::factory(20)->create(['category_id'=>$frontend->id]);
+        Blog::factory(20)->create(['category_id'=>$backend->id]);
 
-        Customer::factory(2)->create();
+        Customer::factory(2)->create(); 
 
 
         // $frontend=Category::create([
