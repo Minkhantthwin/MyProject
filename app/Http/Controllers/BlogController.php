@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 
@@ -43,8 +44,9 @@ class BlogController extends Controller
 
     public function create()
     {
-      
-      return view('blogs.create');
+      return view('blogs.create', [
+        'categories'=>Category::all()
+      ]);
     }
 
  
