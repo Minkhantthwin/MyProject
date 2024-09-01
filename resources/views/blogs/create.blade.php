@@ -35,6 +35,13 @@
                     <p class="text-danger">{{$message}}</p>
                     @enderror
                 </div>
+                <div class="mb-3">
+                  <label for="thumbnail" class="form-label">Thumbnail</label>
+                  <input type="file" class="form-control" id="thumbnail" name="thumbnail" value="{{old('thumbnail')}}" required>
+                  @error('thumbnail')
+                    <p class="text-danger">{{$message}}</p>
+                    @enderror
+                </div>
                  <div class="mb-3">
                   <label for="cat" class="form-label">Category</label>
                     <select class="form-control" name="category_id" id="cat">

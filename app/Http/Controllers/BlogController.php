@@ -56,7 +56,7 @@ class BlogController extends Controller
         'intro'=>['required'],
         'body'=>['required'],
         'slug'=>['required', Rule::unique('blogs','slug')],
-        'category_id'=>['required']
+        'category_id'=>['required', Rule::exists('categories', 'id')]
       ]);
       $formData['user_id'] = auth()->id();
 
