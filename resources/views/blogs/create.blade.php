@@ -5,7 +5,7 @@
     <div class="row"></div>
     <x-card-wrapper>
     <h3 class="my-3 text-center">Blog Create Form</h3>
-    <form action="/admin/blogs/store" method="post">
+    <form enctype="multipart/form-data" action="/admin/blogs/store" method="post">
               @csrf
                 <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
