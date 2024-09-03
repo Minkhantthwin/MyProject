@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AdminBlogController;
 use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Customer;
@@ -26,8 +27,12 @@ Route::get('/index',[BlogController::class,'index']);
 Route::get('/blogs/{blog:slug}',[BlogController::class, 'show']);
 Route::post('/blogs/{blog:slug}/subscription', [BlogController::class, 'subscriptionHandler']);
 
-Route::get('/admin/blogs/create', [BlogController::class, 'create'])->middleware('admin');
-Route::post('/admin/blogs/store', [BlogController::class, 'store'])->middleware('admin');
+Route::get('/admin/index',[AdminBlogController::class,'index'])->middleware('admin');
+Route::get('/admin/blogs/create', [AdminBlogController::class, 'create'])->middleware('admin');
+Route::post('/admin/blogs/store', [AdminBlogController::class, 'store'])->middleware('admin');
+Route::get('/admin/blogs/{blog:slug}/edit', [AdminBlogController::class, 'edit'])->middleware('admin');
+Route::patch('/admin/blogs/{blog:slug}/update', [AdminBlogController::class, 'update'])->middleware('admin');
+Route::delete('/admin/blogs/{blog:slug}/delete', [AdminBlogController::class, 'destory'])->middleware('admin');
 
 Route::post('/blogs/{blog:slug}/comments', [CommentController::class,'store']);
 
@@ -36,7 +41,6 @@ Route::post('/register', [AuthController::class, 'store'])->middleware('guest');
 
 Route::get('/login', [AuthController::class, 'login'])->middleware('guest');
 Route::post('/login', [AuthController::class, 'post_login'])->middleware('guest');
-
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 

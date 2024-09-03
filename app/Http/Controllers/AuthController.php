@@ -41,6 +41,7 @@ class AuthController extends Controller
        return view("auth.login");
     }
     public function post_login(){
+
         $formData=request()->validate([
         'email'=>['required','email', 'max:255', Rule::exists('users', 'email')],
         'password'=>['required','min:8','max:255']
@@ -50,7 +51,15 @@ class AuthController extends Controller
       ]);
       
       if(auth()->attempt($formData)){
-        return redirect('/index');
+        if (auth()->user()->is_admin) 
+        {
+          return redirect('/admin/blogs/index');
+        }
+         else 
+        {
+          return redirect('/index');
+        }
+        
       }
       else{
         return redirect()->back()->withErrors([

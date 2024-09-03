@@ -1,8 +1,7 @@
 
-<x-layout>
-<x-navbar/>
+<x-admin-layout>
 <div class="container">
-    <div class="row"></div>
+    <div class="row">
     <x-card-wrapper>
     <h3 class="my-3 text-center">Blog Create Form</h3>
     <form enctype="multipart/form-data" action="/admin/blogs/store" method="post">
@@ -25,4 +24,4 @@
     </x-card-wrapper>
     </div>
     </div>
-</x-layout>
+</x-admin-layout>
