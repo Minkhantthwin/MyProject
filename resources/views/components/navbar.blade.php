@@ -13,7 +13,10 @@
         <a href="/login" class="nav-link">Login</a>
         
         @else
-
+        @can('admin') <!--Check AppServiceProvider(Built a gate for admin check)-->
+        <a href="/admin/index" class="nav-link">Dashboard</a>
+        @endcan
+        
         <a href="#" class="nav-link">Welcome {{auth()->user()->name}}</a>
 
         @endguest

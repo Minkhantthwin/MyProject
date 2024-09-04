@@ -42,7 +42,7 @@ class AdminBlogController extends Controller
       ]);
 
       $formData['user_id'] = auth()->id();
-      $formData['thumbnail'] = request()->file('thumbnail') ? request()->file('thumbnail')->store('thumbnails'): $blog->thumbnail;
+      $formData['thumbnail'] = request()->file('thumbnail') ? request()->file('thumbnail')->store('thumbnails'): $blog->thumbnail; //thumbnails folder is auto created
 
       $blog->update($formData);
 
