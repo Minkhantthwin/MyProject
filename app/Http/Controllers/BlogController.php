@@ -42,15 +42,4 @@ class BlogController extends Controller
        return back();
     }
 
-<<<<<<< HEAD
-    public function create()
-    {
-      return view('blogs.create');
-    }
-=======
-    
-
- 
->>>>>>> 14a1e92e4136808afa7a0743e5a085b5a67d0bed
-    }
-
+  }
