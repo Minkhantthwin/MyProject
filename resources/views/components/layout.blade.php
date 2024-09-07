@@ -41,7 +41,7 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"
   ></script>
-  {{-- ckeditor --}}
+  <!-- {{-- ckeditor --}}
   <script src="/ckeditor/ckeditor.js"></script>
     <script>
         ClassicEditor.create(document.querySelector(".editor"), {
@@ -58,6 +58,6 @@
           console.warn("Build id: 4tbxn2t1nghv-vo64egvrqxia");
           console.error(error);
         });
-    </script>
+    </script> -->
 </body>
 </html>
