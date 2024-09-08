@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AdminBlogController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\AdminInstitutionController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Customer;
 use App\Models\User;
@@ -35,6 +36,8 @@ Route::middleware('can:admin')->group(function(){
     Route::get('/admin/blogs/{blog:slug}/edit', [AdminBlogController::class, 'edit']);
     Route::patch('/admin/blogs/{blog:slug}/update', [AdminBlogController::class, 'update']);
     Route::delete('/admin/blogs/{blog:slug}/delete', [AdminBlogController::class, 'destory']);
+
+    Route::get('/admin/institutions/create', [AdminInstitutionController::class, 'create']);
 });
 
 Route::post('/blogs/{blog:slug}/comments', [CommentController::class,'store']);
